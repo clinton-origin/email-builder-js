@@ -71,55 +71,23 @@ export function ColumnsContainer({ style, columns, props }: ColumnsContainerProp
     fixedWidths: props?.fixedWidths,
   };
 
-  // Generate unique ID for this instance to target with CSS
-  const containerId = `columns-container-${Math.random().toString(36).substring(2, 9)}`;
-
   return (
     <div style={wStyle}>
-      {/* Responsive styles */}
-      <style>
-        {`
-        @media screen and (max-width: 600px) {
-          #${containerId} table, 
-          #${containerId} tbody, 
-          #${containerId} tr, 
-          #${containerId} td {
-            display: block !important;
-            width: 100% !important;
-            max-width: 100% !important;
-          }
-          
-          #${containerId} td {
-            margin-bottom: ${blockProps.columnsGap}px !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-          }
-          
-          #${containerId} td:last-child {
-            margin-bottom: 0 !important;
-          }
-        }
-        `}
-      </style>
-      
-      <div id={containerId}>
-        <table
-          align="centercj"
-          width="100%"
-          cellPadding="0"
-          cellSpacing="0"
-          border={0}
-          style={{ tableLayout: 'fixed', borderCollapse: 'collapse', msoTableLspace: '0pt', msoTableRspace: '0pt' }}
-        >
-          <tbody style={{ width: '100%' }}>
-            <tr style={{ width: '100%' }}>
-              <TableCell index={0} props={blockProps} columns={columns} />
-              <TableCell index={1} props={blockProps} columns={columns} />
-              <TableCell index={2} props={blockProps} columns={columns} />
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table
+        align="center"
+        width="100%"
+        cellPadding="1"
+        border={0}
+        style={{ tableLayout: 'fixed', borderCollapse: 'collapse' }}
+      >
+        <tbody style={{ width: '100%' }}>
+          <tr style={{ width: '100%' }}>
+            <TableCell index={0} props={blockProps} columns={columns} />
+            <TableCell index={1} props={blockProps} columns={columns} />
+            <TableCell index={2} props={blockProps} columns={columns} />
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -134,7 +102,6 @@ type Props = {
   index: number;
   columns?: TColumn[];
 };
-
 function TableCell({ index, props, columns }: Props) {
   const contentAlignment = props?.contentAlignment ?? ColumnsContainerPropsDefaults.contentAlignment;
   const columnsCount = props?.columnsCount ?? ColumnsContainerPropsDefaults.columnsCount;
@@ -150,26 +117,8 @@ function TableCell({ index, props, columns }: Props) {
     paddingRight: getPaddingAfter(index, props),
     width: props.fixedWidths?.[index] ?? undefined,
   };
-  
   const children = (columns && columns[index]) ?? null;
-  
-  // Add class for MS Outlook compatibility
-  return (
-    <td style={style} className="column">
-      {/* For Outlook which doesn't support media queries well */}
-      <!--[if mso]>
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td valign={contentAlignment} width="100%">
-      <![endif]-->
-      <div style={{ maxWidth: '100%' }}>{children}</div>
-      <!--[if mso]>
-          </td>
-        </tr>
-      </table>
-      <![endif]-->
-    </td>
-  );
+  return <td style={style}>{children}</td>;
 }
 
 function getPaddingBefore(index: number, { columnsGap, columnsCount }: Props['props']) {
