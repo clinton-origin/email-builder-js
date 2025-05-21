@@ -26,16 +26,16 @@
     "zod": "^1 || ^2 || ^3"
   },
   "dependencies": {
-    "@usewaypoint/block-avatar": "^0.0.3",
-    "@usewaypoint/block-button": "^0.0.3",
-    "@usewaypoint/block-columns-container": "^0.0.3",
-    "@usewaypoint/block-container": "^0.0.2",
-    "@usewaypoint/block-divider": "^0.0.4",
-    "@usewaypoint/block-heading": "^0.0.3",
-    "@usewaypoint/block-html": "^0.0.3",
-    "@usewaypoint/block-image": "^0.0.5",
-    "@usewaypoint/block-spacer": "^0.0.3",
-    "@usewaypoint/block-text": "^0.0.6",
-    "@usewaypoint/document-core": "^0.0.6"
+    "@usewaypoint/block-avatar": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-button": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-columns-container": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-container": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-divider": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-heading": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-html": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-image": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-spacer": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/block-text": "github:clinton-origin/email-builder-js",
+    "@usewaypoint/document-core": "github:clinton-origin/email-builder-js"
   }
 }
