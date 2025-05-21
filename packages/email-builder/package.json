@@ -27,16 +27,16 @@
     "zod": "^1 || ^2 || ^3"
   },
   "dependencies": {
-    "@usewaypoint/block-avatar": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-button": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-columns-container": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-container": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-divider": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-heading": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-html": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-image": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-spacer": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/block-text": "github:clinton-origin/email-builder-js",
-    "@usewaypoint/document-core": "github:clinton-origin/email-builder-js"
+"@usewaypoint/block-avatar": "github:clinton-origin/email-builder-js#main:packages/block-avatar",
+    "@usewaypoint/block-button": "github:clinton-origin/email-builder-js#main:packages/block-button",
+    "@usewaypoint/block-columns-container": "github:clinton-origin/email-builder-js#main:packages/block-columns-container",
+    "@usewaypoint/block-container": "github:clinton-origin/email-builder-js#main:packages/block-container",
+    "@usewaypoint/block-divider": "github:clinton-origin/email-builder-js#main:packages/block-divider",
+    "@usewaypoint/block-heading": "github:clinton-origin/email-builder-js#main:packages/block-heading",
+    "@usewaypoint/block-html": "github:clinton-origin/email-builder-js#main:packages/block-html",
+    "@usewaypoint/block-image": "github:clinton-origin/email-builder-js#main:packages/block-image",
+    "@usewaypoint/block-spacer": "github:clinton-origin/email-builder-js#main:packages/block-spacer",
+    "@usewaypoint/block-text": "github:clinton-origin/email-builder-js#main:packages/block-text",
+    "@usewaypoint/document-core": "github:clinton-origin/email-builder-js#main:packages/document-core"
   }
 }
