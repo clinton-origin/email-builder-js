@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "build": "echo \"Error: This is a placeholder. Replace with actual build command for @usewaypoint/block-columns-container\"",
+     "build": "npx tsc",
     "prepare": "npm run build"
   },
   "author": "carlos@usewaypoint.com",
