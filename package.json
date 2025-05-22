@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+   "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "npx tsc",
     "test": "npx jest"

@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@usewaypoint/*": ["packages/*/src"]
+    },
     "target": "es2015",
     "module": "esnext",
     "lib": [],
@@ -18,5 +22,10 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true
   },
-  "exclude": ["dist"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "packages/**/dist",
+    "packages/**/node_modules"
+  ]
 }
