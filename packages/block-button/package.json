@@ -17,8 +17,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "build": "npx tsc",
-    "prepare": "npm run build"
+     "build": "npx tsc"
   },
   "author": "carlos@usewaypoint.com",
   "license": "MIT",
